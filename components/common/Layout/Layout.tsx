@@ -15,6 +15,7 @@ import PaymentMethodView from '@components/checkout/PaymentMethodView'
 import CheckoutSidebarView from '@components/checkout/CheckoutSidebarView'
 import { CheckoutProvider } from '@components/checkout/context'
 import MenuSidebarView, { Link } from '../UserNav/MenuSidebarView'
+import main_manu from '../../../main_manu'
 
 import LoginView from '@components/auth/LoginView'
 import s from './Layout.module.css'
@@ -29,34 +30,25 @@ const dynamicProps = {
   loading: Loading,
 }
 
-const SignUpView = dynamic(
-  () => import('@components/auth/SignUpView'),
-  {
-    ...dynamicProps
-  }
-)
+const SignUpView = dynamic(() => import('@components/auth/SignUpView'), {
+  ...dynamicProps,
+})
 
 const ForgotPassword = dynamic(
   () => import('@components/auth/ForgotPassword'),
   {
-    ...dynamicProps
-  }
-)
-
-const FeatureBar = dynamic(
-  () => import('@components/common/FeatureBar'),
-  {
-    ...dynamicProps
-  }
-)
-
-const Modal = dynamic(
-  () => import('@components/ui/Modal'),
-  {
     ...dynamicProps,
-    ssr: false
   }
 )
+
+const FeatureBar = dynamic(() => import('@components/common/FeatureBar'), {
+  ...dynamicProps,
+})
+
+const Modal = dynamic(() => import('@components/ui/Modal'), {
+  ...dynamicProps,
+  ssr: false,
+})
 
 interface Props {
   pageProps: {
@@ -118,10 +110,11 @@ const Layout: FC<Props> = ({
 }) => {
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies()
   const { locale = 'en-US' } = useRouter()
-  const navBarlinks = categories.slice(0, 2).map((c) => ({
-    label: c.name,
-    href: `/search/${c.slug}`,
-  }))
+  // const navBarlinks = categories.slice(0, 2).map((c) => ({
+  //   label: c.name,
+  //   href: `/search/${c.slug}`,
+  // }))
+  const navBarlinks = main_manu
 
   return (
     <CommerceProvider locale={locale}>

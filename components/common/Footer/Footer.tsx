@@ -8,6 +8,7 @@ import { Github, Vercel } from '@components/icons'
 import { Logo, Container } from '@components/ui'
 import { I18nWidget } from '@components/common'
 import s from './Footer.module.css'
+import main_manu from '../../../main_manu'
 
 interface Props {
   className?: string
@@ -36,17 +37,18 @@ const Footer: FC<Props> = ({ className, pages }) => {
                 <span className="rounded-full border border-accent-6 mr-2">
                   <Logo />
                 </span>
-                <span>ACME</span>
+                <span>Crazy In Desk</span>
               </a>
             </Link>
           </div>
           <div className="col-span-1 lg:col-span-8">
             <div className="grid md:grid-rows-4 md:grid-cols-3 md:grid-flow-col">
-              {[...links, ...sitePages].map((page) => (
-                <span key={page.url} className="py-3 md:py-0 md:pb-4">
-                  <Link href={page.url!}>
+              {/* {[...links, ...sitePages].map((page) => ( */}
+              {main_manu.map((page) => (
+                <span key={page.href} className="py-3 md:py-0 md:pb-4">
+                  <Link href={page.href!}>
                     <a className="text-accent-9 hover:text-accent-6 transition ease-in-out duration-150">
-                      {page.name}
+                      {page.label}
                     </a>
                   </Link>
                 </span>
