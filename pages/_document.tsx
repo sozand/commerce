@@ -5,6 +5,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head />
+        <link rel="shortcut icon" href="/tab_logo.svg" />
         <body className="loading">
           <Main />
           <NextScript />
