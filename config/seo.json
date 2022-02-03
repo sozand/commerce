@@ -1,20 +1,20 @@
 {
-  "title": "ACME Storefront | Powered by Next.js Commerce",
-  "titleTemplate": "%s - ACME Storefront",
-  "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+  "title": "CID Store | Crazy In Desk",
+  "titleTemplate": "%s - Crazy In Desk",
+  "description": "Crazy In Desk website",
   "openGraph": {
-    "title": "ACME Storefront | Powered by Next.js Commerce",
-    "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+    "title": "CID Store | Crazy In Desk",
+    "description": "Crazy In Desk website",
     "type": "website",
     "locale": "en_IE",
     "url": "https://nextjs.org/commerce",
-    "site_name": "Next.js Commerce",
+    "site_name": "Crazy In Desk",
     "images": [
       {
-        "url": "/card.png",
+        "url": "CID_card.png",
         "width": 800,
         "height": 600,
-        "alt": "Next.js Commerce"
+        "alt": "Crazy In Desk"
       }
     ]
   },

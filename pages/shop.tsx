@@ -11,6 +11,36 @@ import { InboxIcon, SparklesIcon } from '@heroicons/react/outline'
 import hero_pic from '../public//photo-1520333789090-1afc82db536a.jpeg'
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 
+export async function getStaticProps({
+  preview,
+  locale,
+  locales,
+}: GetStaticPropsContext) {
+  const config = { locale, locales }
+  const productsPromise = commerce.getAllProducts({
+    variables: { first: 6 },
+    config,
+    preview,
+    // Saleor provider only
+    ...({ featured: true } as any),
+  })
+  const pagesPromise = commerce.getAllPages({ config, preview })
+  const siteInfoPromise = commerce.getSiteInfo({ config, preview })
+  const { products } = await productsPromise
+  const { pages } = await pagesPromise
+  const { categories, brands } = await siteInfoPromise
+
+  return {
+    props: {
+      products,
+      categories,
+      brands,
+      pages,
+    },
+    revalidate: 60,
+  }
+}
+
 const testimonials = [
   {
     id: 1,
@@ -65,7 +95,7 @@ const categories = [
   },
 ]
 
-const products = [
+const products_test = [
   {
     id: 1,
     name: 'Focus Paper Refill',
@@ -111,7 +141,9 @@ const products = [
   // More products...
 ]
 
-export default function Shop() {
+export default function Shop({
+  products,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <div className="bg-white relative overflow-hidden">
@@ -282,7 +314,7 @@ export default function Shop() {
           </h2>
 
           <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8">
-            {products.map((product) => (
+            {products_test.map((product) => (
               <a key={product.id} href={product.href} className="group">
                 <div className="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-2 sm:aspect-h-3">
                   <img

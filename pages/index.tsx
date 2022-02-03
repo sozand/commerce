@@ -24,9 +24,9 @@ const features = [
   { name: 'Push to Deploy', icon: CloudUploadIcon },
   { name: 'SSL Certificates', icon: LockClosedIcon },
   { name: 'Simple Queues', icon: RefreshIcon },
-  { name: 'Advanced Security', icon: ShieldCheckIcon },
-  { name: 'Powerful API', icon: CogIcon },
-  { name: 'Database Backups', icon: ServerIcon },
+  // { name: 'Advanced Security', icon: ShieldCheckIcon },
+  // { name: 'Powerful API', icon: CogIcon },
+  // { name: 'Database Backups', icon: ServerIcon },
 ]
 
 export default function Home() {
@@ -84,6 +84,7 @@ export default function Home() {
           </div>
         </main>
       </div>
+
       <div className="relative bg-white pt-16 pb-32 overflow-hidden">
         <div className="relative">
           <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
@@ -201,7 +202,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-indigo-800">
+      {/* <div className="bg-indigo-800">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
@@ -239,6 +240,9 @@ export default function Home() {
             </div>
           </dl>
         </div>
+      </div> */}
+      <div className="max-w-6xl mx-auto">
+        <hr />
       </div>
       <div className="relative bg-white py-16 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
@@ -282,6 +286,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="bg-white">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8">
