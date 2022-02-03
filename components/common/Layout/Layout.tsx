@@ -15,7 +15,7 @@ import PaymentMethodView from '@components/checkout/PaymentMethodView'
 import CheckoutSidebarView from '@components/checkout/CheckoutSidebarView'
 import { CheckoutProvider } from '@components/checkout/context'
 import MenuSidebarView, { Link } from '../UserNav/MenuSidebarView'
-import main_manu from '../../../main_manu'
+import main_manu from '../../../assets/main_manu'
 
 import LoginView from '@components/auth/LoginView'
 import s from './Layout.module.css'

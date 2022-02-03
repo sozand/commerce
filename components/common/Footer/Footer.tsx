@@ -8,7 +8,7 @@ import { Github, Vercel } from '@components/icons'
 import { Logo, Container } from '@components/ui'
 import { I18nWidget } from '@components/common'
 import s from './Footer.module.css'
-import main_manu from '../../../main_manu'
+import main_manu from '../../../assets/main_manu'
 
 interface Props {
   className?: string
