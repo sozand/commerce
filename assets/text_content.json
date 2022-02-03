@@ -1,0 +1,57 @@
+{
+  "Home": {
+    "Hero_Content": [
+      {
+        "HeroID": 1,
+        "text": [
+          {
+            "locale": "en-US",
+            "head1": "Data to enrich your",
+            "head2": "online business",
+            "short_description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
+          },
+          {
+            "locale": "th-TH",
+            "head1": "",
+            "head2": "",
+            "short_description": ""
+          }
+        ]
+      }
+    ],
+    "Feature_Article": {
+      "article_1": [
+        {
+          "locale": "en-US",
+          "title": "Stay on top of customer support",
+          "short_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+          "button_text": "Read more",
+          "manager_comment": "“Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean curabitur donec aliquet. Mi venenatis in euismod ut.”",
+          "manager_name": "Marcia Hill, Digital Marketing Manager"
+        },
+        {
+          "locale": "th-TH",
+          "title": "",
+          "short_description": "",
+          "button_text": "อ่านต่อ",
+          "manager_comment": "“”",
+          "manager_name": ""
+        }
+      ],
+      "article_2": [
+        {
+          "locale": "en-US",
+          "title": "Stay on top of customer support",
+          "short_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+          "button_text": "Read more"
+        },
+        {
+          "locale": "th-TH",
+          "title": "",
+          "short_description": "",
+          "button_text": "อ่านต่อ"
+        }
+      ]
+    }
+  }
+}
