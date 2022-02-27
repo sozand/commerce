@@ -9,13 +9,16 @@ const fetchGraphqlApi: GraphQLFetcher = async (
   { variables } = {},
   fetchOptions
 ) => {
+  debugger
   try {
     const res = await fetch(API_URL, {
       ...fetchOptions,
       method: 'POST',
       headers: {
         'X-Shopify-Storefront-Access-Token': API_TOKEN!,
+        // 'X-Shopify-Access-Token': API_TOKEN!,
         ...fetchOptions?.headers,
+        // 'Content-Type': 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -35,7 +38,7 @@ const fetchGraphqlApi: GraphQLFetcher = async (
     throw getError(
       [
         {
-          message: `${err} \n Most likely related to an unexpected output. e.g the store might be protected with password or not available.`,
+          message: `${err} ${query} \n Most likely related to an unexpected output. e.g the store might be protected with password or not available.`,
         },
       ],
       500
