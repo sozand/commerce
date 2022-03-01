@@ -28,6 +28,13 @@ const LOCALES_MAP: Record<string, LOCALE_DATA> = {
       alt: 'US Flag',
     },
   },
+  'th-TH': {
+    name: 'Thai',
+    img: {
+      filename: 'flag-en-us.svg',
+      alt: 'Thai Flag',
+    },
+  },
 }
 
 const I18nWidget: FC = () => {
